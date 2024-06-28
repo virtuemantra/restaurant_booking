@@ -45,5 +45,5 @@ class Preference {
   //
   static Future<void> setLogin(bool login) => _pref!.setBool(_IS_LOGIN, login);
   //
-  // static void clear() => _pref?.clear();
+  static void clear() => _pref?.clear();
 }

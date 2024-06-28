@@ -21,7 +21,7 @@ class LoginController extends GetxController{
             status.value = Status.PROGRESS;
             Toasty.normal("Login Successfully");
             Preference.setLogin(true);
-            Get.to(()=>HomeScreen());
+            Get.offAll(()=>HomeScreen());
             // var json = await Repository.instance.socialLogin(id, 'GOOGLE', name!, email, img);
             // loginSuccess(json, context: context);
          } else {
@@ -52,7 +52,7 @@ class LoginController extends GetxController{
          );
          Toasty.normal("Login Successfully");
          Preference.setLogin(true);
-         Get.to(()=>HomeScreen());
+         Get.offAll(()=>HomeScreen());
          status.value=Status.NORMAL;
       } catch (e) {
          status.value=Status.NORMAL;
